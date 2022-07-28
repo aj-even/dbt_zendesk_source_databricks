@@ -1,9 +1,7 @@
 version: 2
 
 sources:
-  - name: zendesk
-    database: "{{var ('zendesk_database', target.database)}}"
-    schema: "{{var ('zendesk_schema', 'zendesk')}}"
+  - name: bronze_zendesk
 
     loader: fivetran
     loaded_at_field: _fivetran_synced
