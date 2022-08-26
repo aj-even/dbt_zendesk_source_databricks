@@ -55,4 +55,6 @@ vars:
     , 'custom_qc_included_product_penetration_statement'
     , 'custom_qc_security_comments'
     , 'custom_dispute_status'
+    , 'custom_dispute_type'
+
     ]
