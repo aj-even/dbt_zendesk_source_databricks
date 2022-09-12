@@ -71,5 +71,6 @@ vars:
     , 'custom_reason_why_wasn_t_a_marqeta_chargeback_credit_applied_'
     , 'custom_date_of_issue'
     , 'custom_provide_an_explanation_for_the_issue_marqeta_chargeback_response_not_received_'
+    , 'custom_reason_for_dispute'
     
     ]
