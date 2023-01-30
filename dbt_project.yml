@@ -73,6 +73,7 @@ vars:
     , 'custom_provide_an_explanation_for_the_issue_marqeta_chargeback_response_not_received_'
     , 'custom_reason_for_dispute'
     , 'custom_contact_verification_status'
+    , 'custom_contact_id'
     , 'custom_potential_ato'
     , 'custom_agent_selected_dispute_type'
     , 'custom_reason_for_risk_review'
