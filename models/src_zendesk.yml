@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: bronze_zendesk
+  - name: bronze
     catalog: bronze
     schema: main
 
