@@ -2,6 +2,8 @@ version: 2
 
 sources:
   - name: bronze_zendesk
+    catalog: bronze
+    schema: main
 
     loader: fivetran
     loaded_at_field: _fivetran_synced
@@ -12,7 +14,7 @@ sources:
 
 
     tables:
-      - name: ticket
+      - name: zendesk_ticket
         description: >
           Tickets are the means through which your end users (customers) communicate with agents in Zendesk Support. Tickets can 
           originate from a number of channels, including email, Help Center, chat, phone call, Twitter, Facebook, or the API.
@@ -69,7 +71,7 @@ sources:
           - name: via_source_to_name
             description: The name of the source the ticket was created from    
 
-      - name: brand
+      - name: zendesk_brand
         description: >
           Brands are your customer-facing identities. They might represent multiple products or services, or they 
           might literally be multiple brands owned and represented by your company.
@@ -85,7 +87,7 @@ sources:
           - name: active
             description: If the brand is set as active
 
-      - name: domain_name
+      - name: zendesk_domain_name
         description: Domain names associated with an organization. An organization may have multiple domain names.
         meta:
           is_enabled: "{{ var('using_domain_names', true) }}"
@@ -97,7 +99,7 @@ sources:
           - name: index
             description: Index number of the domain name associated with the organization
 
-      - name: group
+      - name: zendesk_group
         description: >
           When support requests arrive in Zendesk Support, they can be assigned to a Group. Groups serve as the core
           element of ticket workflow; support agents are organized into Groups and tickets can be assigned to a Group
@@ -113,7 +115,7 @@ sources:
           - name: name
             description: The name of the group
 
-      - name: organization_tag
+      - name: zendesk_organization_tag
         description: The tags associated with an organization. An organization may have multiple tags.
         meta:
           is_enabled: "{{ var('using_organization_tags', true) }}"
@@ -123,7 +125,7 @@ sources:
           - name: tag
             description: Tag associated with the organization
 
-      - name: organization
+      - name: zendesk_organization
         description: >
           Just as agents can be segmented into groups in Zendesk Support, your customers (end-users) can be segmented into 
           organizations. You can manually assign customers to an organization or automatically assign them to an organization 
@@ -162,7 +164,7 @@ sources:
           - name: organization_fields
             description: Custom fields for this organization
 
-      - name: ticket_comment
+      - name: zendesk_ticket_comment
         description: Ticket comments represent the conversation between requesters, collaborators, and agents. Comments can be public or private.
         loaded_at_field: _fivetran_synced
         columns:
@@ -185,7 +187,7 @@ sources:
           - name: voice_comment
             description: Boolean field indicating if the comment is a voice comment
 
-      - name: user_tag
+      - name: zendesk_user_tag
         description: Table containing all tags associated with a user. Only present if your account has user tagging enabled.
         meta:
           is_enabled: "{{ var('using_user_tags', true) }}"
@@ -195,7 +197,7 @@ sources:
           - name: tag
             description: Tag associated with the user
 
-      - name: user
+      - name: zendesk_user
         description: Zendesk has three types of users, end-users (your customers), agents, and administrators.
         freshness: null
         columns:
@@ -218,7 +220,7 @@ sources:
           - name: ticket_restriction
             description: Specifies which tickets the user has access to. Possible values are organization, groups, assigned, requested and null
 
-      - name: schedule
+      - name: zendesk_schedule
         description: The support schedules created with different business hours and holidays. 
         freshness: null
         meta:
@@ -237,7 +239,7 @@ sources:
           - name: time_zone
             description: Timezone in which the schedule operates. 
           
-      - name: ticket_schedule
+      - name: zendesk_ticket_schedule
         description: The schedules applied to tickets through a trigger.
         freshness: null
         columns: 
@@ -248,7 +250,7 @@ sources:
           - name: schedule_id
             description: The ID of the schedule applied to the ticket
       
-      - name: ticket_form_history
+      - name: zendesk_ticket_form_history
         description: Ticket forms allow an admin to define a subset of ticket fields for display to both agents and end users.
         meta:
           is_enabled: "{{ var('using_ticket_form_history', true) }}"
@@ -266,7 +268,7 @@ sources:
           - name: name
             description: The name of the form
 
-      - name: ticket_tag
+      - name: zendesk_ticket_tag
         description: >
           Tags are words, or combinations of words, you can use to add more context to tickets. The table lists all
           tags currently associated with a ticket.
@@ -278,7 +280,7 @@ sources:
             description: The tag, or word(s), associated with the ticket
 
       
-      - name: ticket_field_history
+      - name: zendesk_ticket_field_history
         description: All fields and field values associated with tickets.
         freshness: null
         columns: 
@@ -293,7 +295,7 @@ sources:
           - name: user_id
             description: The id of the user who made the update
       
-      - name: daylight_time
+      - name: zendesk_daylight_time
         description: >
           Appropriate offsets (from UTC) for timezones that engage or have engaged with Daylight Savings at some point since 1970.
         freshness: null
@@ -309,7 +311,7 @@ sources:
           - name: year
             description: Year in which daylight savings occurred. 
 
-      - name: time_zone
+      - name: zendesk_time_zone
         description: Offsets (from UTC) for each timezone. 
         freshness: null
         columns:
