@@ -15,24 +15,24 @@ models:
 
 vars:
   zendesk_source:
-    group: "{{ source('bronze_zendesk', 'group') }}"
-    brand: "{{ source('bronze_zendesk', 'brand') }}"
-    domain_name: "{{ source('bronze_zendesk', 'domain_name') }}"
-    organization_tag: "{{ source('bronze_zendesk', 'organization_tag') }}"
-    organization: "{{ source('bronze_zendesk', 'organization') }}"
-    schedule: "{{ source('bronze_zendesk', 'schedule') }}"
-    satisfaction_rating: "{{ source('bronze_zendesk', 'satisfaction_rating') }}"
-    ticket: "{{ source('bronze_zendesk', 'ticket') }}"
-    ticket_form_history: "{{ source('bronze_zendesk', 'ticket_form_history') }}"
-    ticket_comment: "{{ source('bronze_zendesk', 'ticket_comment') }}"
-    ticket_field_history: "{{ source('bronze_zendesk', 'ticket_field_history') }}"
-    ticket_schedule: "{{ source('bronze_zendesk', 'ticket_schedule') }}"
-    ticket_tag: "{{ source('bronze_zendesk', 'ticket_tag') }}"
-    user_tag: "{{ source('bronze_zendesk', 'user_tag') }}"
-    user: "{{ source('bronze_zendesk', 'user') }}"
-    time_zone: "{{ source('bronze_zendesk', 'time_zone') }}"
-    daylight_time: "{{ source('bronze_zendesk', 'daylight_time') }}"
-    zendesk_schema: bronze_zendesk
+    group: "{{ source('bronze', 'zendesk_group') }}"
+    brand: "{{ source('bronze', 'zendesk_brand') }}"
+    domain_name: "{{ source('bronze', 'zendesk_domain_name') }}"
+    organization_tag: "{{ source('bronze', 'zendesk_organization_tag') }}"
+    organization: "{{ source('bronze', 'zendesk_organization') }}"
+    schedule: "{{ source('bronze', 'zendesk_schedule') }}"
+    satisfaction_rating: "{{ source('bronze', 'zendesk_satisfaction_rating') }}"
+    ticket: "{{ source('bronze', 'zendesk_ticket') }}"
+    ticket_form_history: "{{ source('bronze', 'zendesk_ticket_form_history') }}"
+    ticket_comment: "{{ source('bronze', 'zendesk_ticket_comment') }}"
+    ticket_field_history: "{{ source('bronze', 'zendesk_ticket_field_history') }}"
+    ticket_schedule: "{{ source('bronze', 'zendesk_ticket_schedule') }}"
+    ticket_tag: "{{ source('bronze', 'zendesk_ticket_tag') }}"
+    user_tag: "{{ source('bronze', 'zendesk_user_tag') }}"
+    user: "{{ source('bronze', 'zendesk_user') }}"
+    time_zone: "{{ source('bronze', 'zendesk_time_zone') }}"
+    daylight_time: "{{ source('bronze', 'zendesk_daylight_time') }}"
+    zendesk_schema: bronze
     using_schedules: false 
     zendesk__ticket_passthrough_columns: [
     'custom_received_at_noreply_'
