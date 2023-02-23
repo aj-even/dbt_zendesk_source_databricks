@@ -9,6 +9,7 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 models:
   zendesk_source:
     materialized: view
+    catalog: intermediate
     +schema: staging_zendesk
     tmp:
       materialized: view
