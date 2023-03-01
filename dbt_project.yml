@@ -104,5 +104,6 @@ vars:
     , 'custom_complaint_category_c_'
     , 'custom_no_bank_error_goodwill_c_'
     , 'custom_complaint_resolved_date_c_'
+    , 'custom_contact_driver'
     
     ]
