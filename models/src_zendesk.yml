@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: bronze
     catalog: bronze
-    schema: main
+    schema: staging
 
     loader: fivetran
     loaded_at_field: _fivetran_synced
