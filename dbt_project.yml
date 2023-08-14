@@ -55,6 +55,7 @@ vars:
     , 'custom_qc_has_been_qc_d'
     , 'custom_qc_included_product_penetration_statement'
     , 'custom_qc_security_comments'
+    , 'custom_queue'
     , 'custom_dispute_status'
     , 'custom_dispute_type'
     , 'custom_dispute_qc_was_a_final_dispute_resolution_letter_sent_was_the_pvc_clawback_letter_sent_'
